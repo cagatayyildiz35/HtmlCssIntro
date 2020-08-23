@@ -9,26 +9,41 @@
         body {
             margin: 0px
         }
-        li{
+
+        li {
             display: inline-block;
             list-style: none;
             padding-left: 7px;
         }
-        a{
+
+        a {
             text-decoration: none;
             color: #ffffff;
         }
-        ul{
+
+        ul {
             padding: 0px;
             display: inline;
-            margin:0px;
+            margin: 0px;
             float: right;
+        }
+
+        @font-face {
+            font-family: 'Product Sans Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Product Sans Regular'), url('./fonts/ProductSans-Regular.woff') format('woff');
+        }
+
+        body {
+            font-family: 'Product Sans Regular';
         }
     </style>
 </head>
 
 <body>
-    <div style="background-image: url('/bg-index.jpg'); height: 530px; background-size: cover;padding-left:35px;padding-right: 35px;">
+    <div
+        style="background-image: url('bg-index.jpg'); height: 530px; background-size: cover;padding-left:35px;padding-right: 35px;">
         <div style="height: 75px;line-height: 4.8;">
             <a href="">LOGO</a>
             <ul>
