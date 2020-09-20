@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="data">
+        <button onclick="Hesap()">Hesapla</button>
+    </div>
+</body>
+
+</html>
+<script>
+    //Ekrana bir input ve bir buton koy. Kullanıcı her butona tıkladığında bir sayı girişi yapmaktadır(diziye eleman ekleyeceksin.). EĞER kullanıcı 0 girerse kullanıcının o zamana kadar girdiği sayıların toplamı ve ortalaması bulunarak ekranda gösterilecektir.    
+    var sayidizi = [];
+
+    function Hesap() {
+        var veri = Number(document.getElementById("data").value);
+
+        if (veri != 0) {
+            console.log(veri);
+            sayidizi.push(Number(veri));
+        }
+        else {
+            var toplam = 0;
+            var ortalama = 0;
+
+            for (i = 0; i < sayidizi.length; i++){
+                toplam = toplam + sayidizi[i];
+            }
+
+            ortalama = toplam / sayidizi.length;
+
+            console.log("Toplam " + toplam);
+            console.log("Ortalama " + ortalama);
+        }
+
+
+        // switch (veri) {
+        //     case 0:
+        //         var toplam = 0;
+        //         var ortalama = 0;
+
+        //         for (i = 0; i < sayidizi.length; i++) {
+        //             toplam = toplam + sayidizi[i];
+        //         }
+
+        //         ortalama = toplam / sayidizi.length;
+
+        //         console.log("Toplam " + toplam);
+        //         console.log("Ortalama " + ortalama);
+        //         break;
+
+        //     default:
+        //         console.log(veri);
+        //         sayidizi.push(Number(veri));
+        //         break;
+        // }
+
+    }
+
+
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="sayi">
+        <button onclick="Bul()">Bul</button>
+    </div>
+</body>
+
+</html>
+<script>
+
+    //1 ile 40 arasında rastgele 10 sayı tanımla ve diziye at. aynı sayıyı diziye atamazsın
+
+    // Rastgele 1- 100 arasında 20 adet sayı tanımla ve bu sayıları diziye at. Kullanıcı dışarıdan sayı girdiğinde dizide varsa kazandınız yoksa kaybettiniz yazsın. ( Kullanıcının 3 kere yanlış girme hakkı var. Hemen kaybettiniz yazamaz)
+
+    var sayilar = [];
+    for (i = 0; i < 20; i++) {
+
+        var rastgle = Math.floor(Math.random() * 100);
+        sayilar.push(rastgle);
+
+    }
+
+    var yannlisadet = 0;
+    function Bul() {
+        var data = Number(document.getElementById('sayi').value);
+
+        if(sayilar.includes(data)){
+            alert("Kazandınız");
+        }
+        else{
+            yannlisadet++;
+            if(yannlisadet >= 3){
+                alert("KAYBETTİN ARTIK YETER!! DUR!!")
+            }
+       
+        }
+
+    }
+
+
+
+
+    var ad = 'Çağatay';
+    for (i = 0; i < ad.length; i++) {
+        console.log(ad[i]);
+    }
+
+</script>
