@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="city">
+        <button onclick="Ekle()">Ekle</button>
+    </div>
+    <div>
+        <button onclick="Adet()">Kaç Adet Eleman var?</button>
+    </div>
+    <div>
+        <button onclick="Ters()">Ters Çevir</button>
+    </div>
+    <div>
+        <input type="text" id="search">
+        <button onclick="Bul()">Bul</button>
+        <button onclick="VarMi()">Eleman Var Mı?</button>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var sehirler = ['İzmir', 'İstanbul', 'Ankara', 'Aydın', 'Diyarbakır', 'Trabzon'];
+
+    //Varsa true yoksa false döndürür
+    function VarMi() {
+        var bulunacak = document.getElementById("search").value;
+        var durum = sehirler.includes(bulunacak);
+
+        console.log(durum);
+
+    }
+
+    //Elemanın dizide nerede olduğunu bulan fonksiyon. Elemanı bulamazsa indexof -1 döner
+    function Bul() {
+        var bulunacak = document.getElementById("search").value;
+
+        var index = sehirler.indexOf(bulunacak);
+
+        console.log(index);
+
+    }
+
+    function Ekle() {
+        var sehir = document.getElementById("city").value;
+
+        sehirler.push(sehir);
+    }
+
+    function Adet() {
+        alert(sehirler.length);
+    }
+
+    function Ters() {
+        console.log(sehirler.reverse());
+    }
+
+
+</script>

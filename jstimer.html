@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider{
+            width: 640px;
+            height: 480px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+
+    </div>
+</body>
+</html>
+<script>
+        var resimler = ['kopek.jpg','kedi.jpg','gus.jpg'];
+        
+        var sayac = 0;
+        //setinterval ms olarak çalışır
+        setInterval(() => {
+          
+            if(sayac == 3){
+                sayac = 0;
+            }
+            document.getElementById("slider").style.backgroundImage = 'url("'+ resimler[sayac] +'")';
+
+            sayac++;
+        }, 1000);
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            position: absolute;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+</body>
+</html>
+<script>
+    //Ekrana genişliği ve yüksekliği belli olan bir div koy. 2 saniyede bir div sağa doğru 50 px gitsin. Hareket etsin falan
+    var left = 0;
+    setInterval(() => {
+        if(left <= (screen.width - 200)){
+            document.getElementById("box").style.left = left + "px";
+        }
+        else{
+        }
+    
+        left = left + 50;
+    }, 400);
+
+       
+
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: relative;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    //ekrana genişliği yüksekliği belli bir div koy. Her saniyede div rastgele 0-100 arasında bir değer alıp sağa gitsin.
+
+    var left = 0;
+    setInterval(() => {
+        var rastgele = Math.round(Math.random() * 100 );
+
+        left = left + rastgele;
+
+        document.getElementById("box").style.left = left + "px";
+
+    }, 1000);
+
+
+    //0 ile bir arasında bir değer üretir
+    Math.random()
+    console.log(Math.floor(Math.random() * 100));
+
+    //0.9102048200581174
+    //9.102048200581174
+
+
+
+
+
+
+</script>

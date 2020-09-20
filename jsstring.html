@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="data">
+    </div>
+    <div>
+        <button onclick="Sub1()">SUBSTRING</button>
+    </div>
+    <div>
+        <button onclick="Upper()">Büyült</button>
+
+    </div>
+    <div>
+        <button onclick="Lower()">Küçült</button>
+    </div>
+    <div>
+        <button onclick="Trimlebeni()">TRIM</button>
+    </div>
+    <div>
+        <button onclick="Replacebeni()">Replace le Beni</button>
+    </div>
+
+</body>
+</html>
+<script>
+    //“Bilge Adam Bilişim teknolojileri” metnindeki son kelimeyi büyült. TEKNOLOJİLERİ
+
+    var ad = 'Bilge Adam Bilişim teknolojileri';
+    var lastindex = ad.lastIndexOf(' ');
+    console.log(ad.substr(lastindex + 1).toUpperCase());  
+
+    var full = ad.substr(0,lastindex + 1) + ad.substr(lastindex + 1).toUpperCase()
+
+    console.log(full)
+
+    // var kelimeler = ad.split(' ');
+    // console.log(kelimeler[kelimeler.length - 1].toUpperCase())
+
+
+     //ad.indexOf()
+   
+    function Sub1(){
+        var veri = document.getElementById('data').value;
+        console.log(veri.substr(2,3));
+    }
+
+    function Replacebeni(){
+        var veri = document.getElementById('data').value;
+        console.log(veri.replaceAll("a"," "))
+        //soru size?
+    }
+
+    function Trimlebeni(){
+        var veri = document.getElementById('data').value;
+        console.log(veri.trim());
+    }
+
+    function Upper(){
+        var veri = document.getElementById("data").value;
+        console.log(veri.toUpperCase());
+    }
+
+    function Lower(){
+        var veri = document.getElementById("data").value;
+        console.log(veri.toLowerCase())
+    }
+</script>
