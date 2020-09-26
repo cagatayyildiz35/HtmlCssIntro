@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <img src="hayvan1.jpg" alt="" srcset="">
+    <img src="hayvan2.jpg" alt="" srcset="">
+
+    <img src="hayvan3.jpg" alt="" srcset="">
+
+</body>
+
+</html>
+<script>
+    // Ekrana 640*480 3 tane resim koy. Hangi resme tıklarsa o resim %50 küçülsün
+
+    $("img").click(function () {
+        let y = $(this).height();
+        let x = $(this).width();
+
+        $(this).width(x / 2);
+        $(this).height(y / 2);
+
+    })
+</script>

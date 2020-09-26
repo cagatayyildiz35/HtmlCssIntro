@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <span>AÇIK</span>
+    </div>
+    <div>
+        <span>AÇIK</span>
+    </div>
+    <div>
+        <span>AÇIK</span>
+    </div>
+</body>
+
+</html>
+<script>
+
+    let status = 0;
+    $("div").click(function () {
+
+        // $(this).children().html("KAPALI");
+        if(status == 0){
+            $(this).children()[0].innerHTML = "KAPALI";
+            status = 1;
+
+        }
+        else{
+            $(this).children()[0].innerHTML = "AÇIK";
+            status = 0;
+        }
+
+    })
+</script>

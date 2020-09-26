@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <input type="text" id="data">
+        <button>Ekle</button>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eveniet placeat repudiandae, beatae laboriosam voluptates praesentium explicabo dolorum impedit, nam esse. Nisi quos voluptatibus recusandae corrupti impedit. Ad, perferendis itaque.</p>
+
+     
+    </div>
+
+    <div id="main">
+        <span>Açık</span>
+    </div>
+</body>
+</html>
+<script>
+    $("button").click(function(){
+        var veri = $("#data").val();
+        $("p").html(veri);
+    })
+
+
+    $("div").click(function(){
+
+    })
+</script>
