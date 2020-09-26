@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div>
+        <button id="btn1">Buton - 1</button>
+        <button id="btn2">Buton - 2</button>
+        <button id="btn3">Buton - 3</button>
+        <button id="btn4">Buton - 4</button>
+        <button id="btn5">Buton - 5</button>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+
+
+    function KDVHesapla(fiyat,kdv = 1.08){
+        console.log(fiyat * kdv)
+    }
+
+
+    function KDVHesapla(fiyat,kdv){
+        if(kdv == null){
+           kdv = 1.08;
+        }
+    }
+
+
+    KDVHesapla(100);
+
+
+
+    var buttons = document.getElementsByTagName("button");
+        
+
+    for (var i = 0; i < buttons.length; i++) {
+      
+      buttons[i].addEventListener("click",function(){
+          console.log(i);
+      })
+        
+    }
+    
+
+
+
+
+
+    // $("button").click((e) => {
+
+    //     console.log($(this));
+    //     // console.log($(this).attr("id"));
+    //     // console.log("Buton tıklandı!");
+
+    // })
+
+    // $("button").click(function () {
+
+    //     // $(this).hide();
+    //     $(this).css("color","red");
+
+    //     //console.log($(this).attr("id"));
+
+    // });
+
+
+
+</script>
