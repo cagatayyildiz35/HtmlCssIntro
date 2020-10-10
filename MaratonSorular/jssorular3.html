@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Given Name</th>
+            <th>AVG Speed</th>
+            <th>Team</th>
+            <th>Country</th>
+        </tr>
+    </table>
+</body>
+
+</html>
+<script>
+    // //Bir tablo aç. Kolonlar ( Pilot Adı( givenname + familyname), ortalama hız, averagespeed objesindeki speed), takımı (constructor id), ülkesi
+
+    fetch("https://ergast.com/api/f1/2004/1/results.json")
+    .then((res)=> res.json())
+    .then((result)=>{
+        result.MRData.RaceTable.Races[0].Results.forEach((element)=>{
+
+        })
+    })
+
+
+    for (i = 0; i < 10; i++) {
+        //console.log(i);
+    }
+
+   // console.log(i);
+
+    // function Kisi(){
+    //     this.ad = "";
+    // }
+
+    // var k = new Kisi();
+
+        const sayi = 3;
+
+       // sayi = 5;
+
+</script>

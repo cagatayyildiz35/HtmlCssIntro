@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body style="margin-left: 20px">
+    <div class="container"></div>
+    <h3>API sorulari 3</h3>
+    <p>/User servisindeki user ların adını ve telefonunu listele. Listelenen user larda telefon numarasında herhangi bir karakter olmayacak. ( -,/ vb karakterleri kaldır ) </p>
+    <button class="btn btn-primary">Fetch</button>
+    
+    
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone Numbers</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    </body>
+    
+</html>
+
+<Script>
+
+$("button").click(function () {
+
+var url = "https://jsonplaceholder.typicode.com/users";
+
+    $.getJSON(url, function (veri) {
+
+        //remove older list from document
+        $("ul li").remove();
+
+        //total user amount
+        var userNum = 0;
+        veri.forEach(function (item) {
+            var isim = item.name;
+            var tel = item.phone;
+            var newTel = tel.replace(/[-().]/g,'');
+  
+            console.log(isim);
+            console.log(tel); 
+
+            $("tbody").append(`
+            <tr id="`+ item.id + `">
+                <td>`+ isim + `</td>
+                <td>`+ newTel + `</td>
+            </tr> `)
+          
+        });
+
+    })
+})
+</Script>
